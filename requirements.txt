@@ -12,11 +12,9 @@ anyio==4.4.0
     #   watchfiles
 click==8.1.7
     # via uvicorn
-colorama==0.4.6
-    # via
-    #   click
-    #   uvicorn
 fastapi==0.112.0
+    # via -r requirements.in
+gunicorn==22.0.0
     # via -r requirements.in
 h11==0.14.0
     # via uvicorn
@@ -26,6 +24,8 @@ httptools==0.6.1
     # via uvicorn
 idna==3.7
     # via anyio
+packaging==24.1
+    # via gunicorn
 pydantic==2.8.2
     # via fastapi
 pydantic-core==2.20.1
@@ -47,6 +47,8 @@ typing-extensions==4.12.2
     #   pydantic-core
 uvicorn[standard]==0.30.5
     # via -r requirements.in
+uvloop==0.19.0
+    # via uvicorn
 watchfiles==0.23.0
     # via uvicorn
 websockets==12.0
